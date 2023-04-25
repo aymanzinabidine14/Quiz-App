@@ -1,0 +1,49 @@
+package com.example.aymanzinabidine;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Score extends AppCompatActivity {
+    Button bLogout, bTry;
+    ProgressBar progressBar;
+    TextView tvScore;
+    int score;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_score);
+        tvScore =(TextView) findViewById(R.id.tvScore);
+        progressBar=(ProgressBar) findViewById(R.id.progressBar);
+        bLogout=(Button) findViewById(R.id.bLogout);
+        bTry=(Button) findViewById(R.id.bTry);
+        Intent intent=getIntent();
+        score=intent.getIntExtra("score",0) ;
+        progressBar.setProgress(100*score/5);
+
+
+        tvScore.setText(100*score/5+" %");
+        progressBar.setProgress(100*score/5);
+        bLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Merci de votre Participation !", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+        bTry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Score.this, quiz_dynamique.class);
+                intent.putExtra("quiz",1);
+                startActivity(intent);            }
+        });
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "189050263016",
+    "project_id": "aymanzinabidine-6af35",
+    "storage_bucket": "aymanzinabidine-6af35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189050263016:android:2e04001659d3f7c1b2005d",
+        "android_client_info": {
+          "package_name": "com.example.aymanzinabidine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189050263016-27licaettj6b7n0pblss58m36814u1s9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEbojApHR-EmwWEk4yPaShrHfV1b5MClc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189050263016-27licaettj6b7n0pblss58m36814u1s9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
